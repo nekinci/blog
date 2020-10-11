@@ -13,4 +13,5 @@ You can visit my blog through this [link.](https://niyaziekinci.com)
 * [x] Reference domain name in this file.
 * [x] Add `Vercel` continuous deployment.
 * [ ] Add Dark Mode.
+* [ ] Add Layout.
 * [x] Add `Google Analytics`
