@@ -16,19 +16,19 @@ const Index = (props) => {
         <meta name="Description" content={props.description}></meta>
     </Head>
     <Layout>
-    <div className="h-full">
-      <ul className="h-full">
-        {ListItems.map((blog, i) => {
-          return (
-            <li key={i}>
-              <Link href={`/${blog.slug}`}>
-                <a>{blog.title}</a>
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
-    </div>
+      <div className="h-full">
+        <ul className="h-full">
+          {ListItems.map((blog, i) => {
+            return (
+              <li key={i}>
+                <Link href={`/${blog.slug}`}>
+                  <a>{blog.title}</a>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
     </Layout>
     </React.Fragment>
     )
