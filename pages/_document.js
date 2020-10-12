@@ -5,7 +5,6 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 export default class MyDocument extends Document {
 
   render() {
-  console.log(process.env.GOOGLE_ANALYTICS_KEY)
     return (
       <Html lang="tr">
         <Head>
