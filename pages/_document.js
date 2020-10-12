@@ -3,6 +3,7 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 export default class MyDocument extends Document {
+  console.log(process.env.GOOGLE_ANALYTICS_KEY)
   render() {
     return (
       <Html lang="tr">
