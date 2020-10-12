@@ -15,3 +15,4 @@ You can visit my blog through this [link.](https://niyaziekinci.com)
 * [ ] Add Dark Mode.
 * [ ] Add Layout.
 * [x] Add `Google Analytics`
+* [ ] Add `Google Analytics` with environment instead of embedded.

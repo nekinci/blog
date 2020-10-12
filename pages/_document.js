@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92686497-1"></script>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_KEY}`}></script>
 
           <script
             dangerouslySetInnerHTML={{
@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', 'UA-92686497-1');
+                    gtag('config', ${process.env.GOOGLE_ANALYTICS_KEY});
         `,
     }}
   />
