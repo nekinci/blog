@@ -40,11 +40,11 @@ export default Index;
 export async function getStaticProps(){
   const siteData = await import(`../config.json`);
   const fs = require('fs');
-  const files = fs.readdirSync(`${process.cwd()}/content`, 'utf-8');
+  const files = fs.readdirSync(`${process.cwd()}/content/posts`, 'utf-8');
   const blogs = files.filter((fn) => fn.endsWith(".md"));
 
   const data = blogs.map((blog) => {
-    const path = `${process.cwd()}/content/${blog}`;
+    const path = `${process.cwd()}/content/posts/${blog}`;
     const rawContent = fs.readFileSync(path, {encoding: 'utf-8'});
 
     return rawContent;

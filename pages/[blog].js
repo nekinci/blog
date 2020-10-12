@@ -3,7 +3,6 @@ import React from 'react';
 import ReactMarkdown from "react-markdown";
 
 const Blog = ({content, data}) => {
-    console.log(content, data);
     const frontmatter = data;
 
     return (
@@ -18,7 +17,7 @@ const Blog = ({content, data}) => {
 Blog.getInitialProps = async (context) => {
     const { blog } = context.query;
 
-    const content = await import(`../content/${blog}.md`);
+    const content = await import(`../content/posts/${blog}.md`);
     const data = matter(content.default);
 
     return {...data};
