@@ -17,7 +17,7 @@ You can visit my blog through this [link.](https://niyaziekinci.com)
 * [x] Add `Google Analytics`
 * [x] Add `Google Analytics` with environment instead of embedded.
 * [x] Separate `posts` and `general` .md files in the `/content` directory
-* [ ] Write about me file
+* [x] Write about me file
 * [ ] Show posts list on the home page.
 * [ ] Integrate [medium](medium.com) posts
 * [ ] And produce new posts!
