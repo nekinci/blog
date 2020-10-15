@@ -24,12 +24,21 @@ const Index = (props) => {
         <Info/>
         <hr/>
         <div>
-          <h4>Medium Postları </h4>
           <ReactMarkdown escapeHtml={false} source={mediumPosts.content} />
         </div>
         <hr/>
         <div>
-          <h4>Blog yazılarım</h4>
+        <h4>Blog Yazılarım</h4>
+        <br/>
+        <ul>
+            {ListItems.map((data, i) => {
+              return (
+                <li key={i}>
+                  <Link href={`/${data.slug}`}><a>{data.title}</a></Link>
+                </li>
+              )
+            })}
+        </ul>
         </div> 
       </div>
     </Layout>
