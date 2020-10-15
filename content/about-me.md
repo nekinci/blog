@@ -33,3 +33,5 @@ Yeni mezun bilgisayar mühendisiyim.
 [4]: https://tr.linkedin.com/in/niyaziekinci
 [6]: http://www.github.com/nekinci
 
+
+** Bana ulaşmak isterseniz [mail](mailto:niyaziekinci5050@gmail.com) adresim üzerinden ulaşabilirsiniz **

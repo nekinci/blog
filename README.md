@@ -19,5 +19,6 @@ You can visit my blog through this [link.](https://niyaziekinci.com)
 * [x] Separate `posts` and `general` .md files in the `/content` directory
 * [x] Write about me file
 * [ ] Show posts list on the home page.
+* [x] Medium Posts Listing on the home page.
 * [ ] Integrate [medium](medium.com) posts
 * [ ] And produce new posts!
