@@ -21,4 +21,5 @@ You can visit my blog through this [link.](https://niyaziekinci.com)
 * [ ] Show posts list on the home page.
 * [x] Medium Posts Listing on the home page.
 * [ ] Integrate [medium](medium.com) posts
+* [ ] Add clap feature based on serverless function.
 * [ ] And produce new posts!

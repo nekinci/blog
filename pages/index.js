@@ -26,7 +26,10 @@ const Index = (props) => {
         <div>
           <h4>Medium Postları </h4>
           <ReactMarkdown escapeHtml={false} source={mediumPosts.content} />
-
+        </div>
+        <hr/>
+        <div>
+          <h4>Blog yazılarım</h4>
         </div> 
       </div>
     </Layout>
