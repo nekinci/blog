@@ -10,3 +10,53 @@ body{
 * {
   box-sizing: border-box;
 }
+
+.top{
+  
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size:2900%;
+  animation: fade;
+}
+
+.container-exts{
+  position: relative;
+}
+
+@media screen and (min-width: 992px){
+  .inner-span{
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 993px){
+  .container-exts{
+    position: unset;
+  }
+  .inner-span{
+    position: fixed;
+    bottom: 30%;
+    right: 0;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

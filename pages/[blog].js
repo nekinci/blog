@@ -5,10 +5,36 @@ import { Col, Container, Row } from 'react-bootstrap';
 import ReactMarkdown from "react-markdown";
 import Info from '../components/Info';
 import Layout from '../components/Layout';
+import Axios from 'axios';
 
 const Blog = ({content, data}) => {
     const frontmatter = data;
+    const [totalClap, setTotalClap] = React.useState(0);
+    const [clapCount, setClapCount] = React.useState(0);
+    const [isClapped, setIsClapped] = React.useState(false);
+    const [animate, setAnimate] = React.useState(false);
+    const getClaps = async () => {
+        const data = await Axios.get(`/api/getClaps?slug=${frontmatter.slug}`);
+        setTotalClap(data.data.claps);
+    }
+    React.useEffect(() => {
+        getClaps();
+    }, []);
 
+    const handleClaps = async () => {
+        setAnimate(true);
+        setIsClapped(true)
+        setTimeout(()=>{
+            setAnimate(false);
+        }, 700);
+        setTotalClap(p => p + 1);
+
+        const data = await Axios.get(`/api/postClaps?slug=${frontmatter.slug}`);
+        console.log(data);
+        if(data.status !== 201){
+            setTotalClap(p => p - 1);
+        }
+    }
     return (
         <React.Fragment>
             <Head>
@@ -19,10 +45,22 @@ const Blog = ({content, data}) => {
                 <h1>{frontmatter.title}</h1>
                 <h6 className="text-secondary"><small>{frontmatter.date}</small></h6>
                 <hr/>
-                <Container className="article-body px-0 pt-2">
-                    <Row >
+                <Container className="article-body px-0 pt-2 container-exts" >
+                    <span className="inner-span">
+                        <div className="text-secondary" style={{textAlign:'center'}}>{totalClap}</div>
+                        <button onClick={handleClaps} style={{border:0, outline:'none', borderRadius:'100%', width:'48px', height:'48px', display:'flex', justifyContent:'center', alignItems:'center'}}>
+                            {
+                                !isClapped ? (
+                                    <span>🤍</span>
+                                ): (
+                               <span className={animate?'top':''}>💙</span>
+                                )
+                            }
+                        </button>
+                    </span>
+                    <Row>
                         <Col md="12" sm="12" lg="8" style={{margin: '0 auto'}}>
-                    <ReactMarkdown escapeHtml={false} source={content} />
+                            <ReactMarkdown escapeHtml={false} source={content} />
                         </Col>
                     </Row>
                 </Container>

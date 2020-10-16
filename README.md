@@ -13,13 +13,14 @@ You can visit my blog through this [link.](https://niyaziekinci.com)
 * [x] Reference domain name in this file.
 * [x] Add `Vercel` continuous deployment.
 * [ ] Add Dark Mode.
-* [ ] Add Layout.
+* [x] Add Layout.
 * [x] Add `Google Analytics`
 * [x] Add `Google Analytics` with environment instead of embedded.
 * [x] Separate `posts` and `general` .md files in the `/content` directory
 * [x] Write about me file
-* [ ] Show posts list on the home page.
+* [x] Show posts list on the home page.
 * [x] Medium Posts Listing on the home page.
 * [ ] Integrate [medium](https://medium.com/@niyaziekinci5050) posts
-* [ ] Add clap feature based on serverless function.
+* [x] Add clap feature based on serverless function.
+* [ ] Add `blogs` page that lists all posts.
 * [ ] And produce new posts!
