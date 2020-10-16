@@ -1,6 +1,6 @@
 # Personal Blog
 
-I am software engineer who improving skills, every day.
+I am software engineer who improving skills every day.
 
 You can visit my blog through this [link.](https://niyaziekinci.com)
 
@@ -22,6 +22,7 @@ You can visit my blog through this [link.](https://niyaziekinci.com)
 * [x] Medium Posts Listing on the home page.
 * [ ] Integrate [medium](https://medium.com/@niyaziekinci5050) posts
 * [x] Add clap feature based on serverless function.
-* [ ] Add `blogs` page that lists all posts.
+* [ ] Add `blog` page that lists all posts.
 * [ ] Add claps limit on the page.
+* [ ] Refactor! Improve code quality. 
 * [ ] And produce new posts!

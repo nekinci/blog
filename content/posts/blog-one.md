@@ -1,6 +1,6 @@
 ---
 slug: blog-one
-title: My First Blog
+title: Test
 description: This Description Of My First Blog.
 date: 11 Ekim 2020
 ---

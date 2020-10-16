@@ -9,7 +9,7 @@ const NavbarComponent = () => {
             <Navbar.Toggle />
             <Nav className="justify-content-end ml-auto">
                 <Nav.Link href="/">home</Nav.Link>
-                <Nav.Link href="/posts">blog</Nav.Link>
+                {/*<Nav.Link href="/posts">blog</Nav.Link>*/}
             </Nav>
         </Navbar>
     )
