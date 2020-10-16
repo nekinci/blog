@@ -9,6 +9,7 @@ export default (req, res) => {
     if (err) throw err;
     var dbo = db.db("db");
     var myobj = { name: "Company Inc", address: "Highway 377" };
+    console.log('function trigerred');
     dbo.collection("claps").insertOne(myobj, function(err, res) {
       if (err) throw err;
       console.log("1 document inserted");
