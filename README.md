@@ -23,6 +23,6 @@ You can visit my blog through this [link.](https://niyaziekinci.com)
 * [ ] Integrate [medium](https://medium.com/@niyaziekinci5050) posts
 * [x] Add clap feature based on serverless function.
 * [ ] Add `blog` page that lists all posts.
-* [ ] Add claps limit on the page.
+* [x] Add claps limit on the page.
 * [ ] Refactor! Improve code quality. 
 * [ ] And produce new posts!

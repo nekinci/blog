@@ -9,28 +9,48 @@ import Axios from 'axios';
 
 const Blog = ({content, data}) => {
     const frontmatter = data;
+    const CLAPS_LIMIT = 10;
     const [totalClap, setTotalClap] = React.useState(0);
-    const [clapCount, setClapCount] = React.useState(0);
     const [isClapped, setIsClapped] = React.useState(false);
     const [animate, setAnimate] = React.useState(false);
+    const [clapsLimit, setClapsLimit] = React.useState(10);
+
+    const setLocalStorage = () => {
+        const count = CLAPS_LIMIT - clapsLimit;
+        localStorage.setItem(frontmatter.slug, count.toString());
+    }
+
+    const getLocalStorage = () => {
+        return localStorage.getItem(frontmatter.slug);
+    }
     const getClaps = async () => {
         const data = await Axios.get(`/api/getClaps?slug=${frontmatter.slug}`);
         setTotalClap(data.data.claps);
+        const count = getLocalStorage();
+        if(count || !isNaN(parseInt(count))) {
+            setClapsLimit(CLAPS_LIMIT - (parseInt(count) + 1))
+        }
     }
     React.useEffect(() => {
         getClaps();
     }, []);
+    React.useEffect(()=> {
+        if(clapsLimit < CLAPS_LIMIT){
+            setIsClapped(true);
+        }
+    }, [clapsLimit]);
 
     const handleClaps = async () => {
+        if(clapsLimit <= 0)
+            return;
+        setClapsLimit(p => p - 1);
         setAnimate(true);
-        setIsClapped(true)
         setTimeout(()=>{
             setAnimate(false);
         }, 700);
         setTotalClap(p => p + 1);
-
+        setLocalStorage();
         const data = await Axios.get(`/api/postClaps?slug=${frontmatter.slug}`);
-        console.log(data);
         if(data.status !== 201){
             setTotalClap(p => p - 1);
         }
