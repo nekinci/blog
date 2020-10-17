@@ -73,7 +73,7 @@ const Blog = ({content, data}) => {
                                 !isClapped ? (
                                     <span>🤍</span>
                                 ): (
-                               <span className={animate?'top':''}>💙</span>
+                               <span className={animate?'top':''}>🤎</span>
                                 )
                             }
                         </button>
